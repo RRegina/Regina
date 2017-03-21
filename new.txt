@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context="com.yjlc.rzgt.rzgt.app.Activity.NewsListActivity">
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipeList"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <yjlc.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+            <yjlc.pulltorefresh.view.PullableListView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/gray"
+                android:dividerHeight="1dp" />
+
+        </yjlc.pulltorefresh.PullToRefreshLayout>
+        <!--<com.yjlc.rzgt.rzgt.widget.OScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/color_f5f5f5"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:fillViewport="false">-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/lin_top"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<yjlc.utils.Xlist.LoadListView-->
+                    <!--android:id="@+id/list_refresh"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:dividerHeight="0.5dp"-->
+                    <!--android:divider="@color/fenge">-->
+
+                <!--</yjlc.utils.Xlist.LoadListView>-->
+
+                <!--<com.yjlc.rzgt.rzgt.widget.NoScrollListView-->
+                    <!--android:id="@+id/list_refresh"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:dividerHeight="0.5dp"-->
+                    <!--android:divider="@color/fenge"-->
+                    <!--android:descendantFocusability="blocksDescendants"-->
+                    <!--android:scrollbars="none">-->
+                    <!--&gt;</com.yjlc.rzgt.rzgt.widget.NoScrollListView>-->
+            <!--</LinearLayout>-->
+        <!--</com.yjlc.rzgt.rzgt.widget.OScrollView>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</LinearLayout>
